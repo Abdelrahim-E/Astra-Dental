@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra Dental Care</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar">×</button>
+        <h2>Astra<span>Settings</span></h2>
+        
+        <div class="sidebar-group">
+            <h4 data-i18n="lang_label">Language</h4>
+            <select id="langSelect">
+                <option value="en">English</option>
+                <option value="ar">العربية (Arabic)</option>
+                
+            </select>
+        </div>
+
+        <div class="sidebar-group">
+            <h4 data-i18n="account_label">Account</h4>
+            <button class="btn-primary" id="loginBtn" data-i18n="login">Log In</button>
+            <button class="btn-outline" id="signupBtn" data-i18n="signup">Sign Up</button>
+        </div>
+
+        <div class="sidebar-group">
+            <h4 data-i18n="theme_label">Theme</h4>
+            <label><input type="checkbox" id="darkModeToggle"> <span data-i18n="dark_mode">Dark Mode</span></label>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Astra<span>Dental</span></a>
+            <nav class="nav">
+                <a href="#services" data-i18n="nav_services">Services</a>
+                <a href="#about" data-i18n="nav_why">Why Us</a>
+                <a href="#team" data-i18n="nav_team">Team</a>
+                <a href="#contact" class="btn-nav" data-i18n="nav_book">Book Now</a>
+            </nav>
+            <button class="settings-btn" id="openSidebar" aria-label="Settings">⚙️</button>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero reveal">
+        <div class="container">
+            <div class="hero-text">
+                <p class="hero-tag" data-i18n="hero_tag">Astra Dental Care</p>
+                <h1 data-i18n="hero_title">Your Smile, <span>Our Priority</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">Modern dental care with a gentle touch. From routine checkups to full smile makeovers — all in one place.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-primary" data-i18n="btn_book">Book Appointment</a>
+                    <a href="#services" class="btn-outline" data-i18n="btn_services">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Dental clinic interior">
+            </div>
+        </div>
+    </section>
+
+    <section class="services reveal" id="services">
+        <div class="container">
+            <div class="section-head">
+                <p class="hero-tag" data-i18n="serv_tag">What We Do</p>
+                <h2 data-i18n="serv_title">Our Services</h2>
+                <p data-i18n="serv_desc">Complete dental care for the whole family.</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="icon">✦</div>
+                    <h3 data-i18n="serv_1_title">Teeth Whitening</h3>
+                    <p data-i18n="serv_1_desc">Brighten your smile in a single visit with safe, professional whitening.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">◇</div>
+                    <h3 data-i18n="serv_2_title">Braces & Aligners</h3>
+                    <p data-i18n="serv_2_desc">Straighten your teeth with modern invisible aligners or classic braces.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">◈</div>
+                    <h3 data-i18n="serv_3_title">Dental Implants</h3>
+                    <p data-i18n="serv_3_desc">Permanent, natural-looking replacements for missing teeth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why reveal" id="about">
+        <div class="container">
+            <div class="why-photo">
+                <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80" alt="Dental clinic reception">
+            </div>
+            <div class="why-text">
+                <p class="hero-tag" data-i18n="why_tag">Why Choose Us</p>
+                <h2 data-i18n="why_title">Care You Can Feel From The First Visit</h2>
+                <p data-i18n="why_desc">We combine modern technology with a calm, friendly environment so every visit feels easy.</p>
+                <ul class="why-list">
+                    <li><strong data-i18n="why_1_title">Gentle & Painless</strong><span data-i18n="why_1_desc">Modern techniques and local anesthesia for a comfortable visit.</span></li>
+                    <li><strong data-i18n="why_2_title">Same-Day Appointments</strong><span data-i18n="why_2_desc">Book online and get seen within 24 hours.</span></li>
+                    <li><strong data-i18n="why_3_title">Clear Pricing</strong><span data-i18n="why_3_desc">You know the full cost before treatment starts.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="team reveal" id="team">
+        <div class="container">
+            <div class="section-head">
+                <p class="hero-tag" data-i18n="team_tag">Our Team</p>
+                <h2 data-i18n="team_title">Meet Your Dentists</h2>
+                <p data-i18n="team_desc">Experienced specialists who care about your comfort.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar">SA</div>
+                    <h3 data-i18n="team_1_name">Dr. Sarah Ahmed</h3>
+                    <span data-i18n="team_1_role">Cosmetic Dentistry</span>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">OH</div>
+                    <h3 data-i18n="team_2_name">Dr. Omar Hassan</h3>
+                    <span data-i18n="team_2_role">Orthodontics</span>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">LM</div>
+                    <h3 data-i18n="team_3_name">Dr. Layla Mostafa</h3>
+                    <span data-i18n="team_3_role">Pediatric Dentistry</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BEFORE & AFTER SLIDER -->
+    <section class="before-after reveal" id="results">
+        <div class="container">
+            <div class="section-head">
+                <p class="hero-tag" data-i18n="ba_tag">Smile Transformation</p>
+                <h2 data-i18n="ba_title">See The Difference</h2>
+                <p data-i18n="ba_desc">Drag the slider to see the results of our smile makeovers.</p>
+                                 <div class="ba-container">
+                <!-- After Image -->
+                <img src="after.jpg" alt="After" class="ba-img">
+                
+                <!-- Before Image -->
+                <img src="before.jpg" alt="Before" class="ba-img" id="beforeImg">
+
+                <!-- Slider Input -->
+                <input type="range" min="0" max="100" value="50" class="ba-slider" id="baSlider">
+                <div class="ba-handle" id="baHandle"></div>
+            </div>
+    </section>    <!-- FAQ SECTION -->
+    <section class="faq reveal" id="faq">
+        <div class="container">
+            <div class="section-head">
+                <p class="hero-tag" data-i18n="faq_tag">Questions</p>
+                <h2 data-i18n="faq_title">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_1_q">Does the treatment hurt?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_1_a">We use modern techniques and local anesthesia to ensure your visit is completely painless and comfortable.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_2_q">How much does a checkup cost?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_2_a">The initial consultation and checkup are completely free for new patients.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-i18n="faq_3_q">Do you accept insurance?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-i18n="faq_3_a">Yes, we accept most major insurance providers. Please contact us to verify your specific plan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials reveal" id="reviews">
+        <div class="container">
+            <div class="section-head">
+                <p class="hero-tag" data-i18n="rev_tag">Testimonials</p>
+                <h2 data-i18n="rev_title">What Our Patients Say</h2>
+                <p data-i18n="rev_desc">Real reviews from real people.</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="rev_1_text">"The best dental experience I've ever had. The clinic is beautiful, and Dr. Sarah made me feel completely at ease."</p>
+                    <div class="reviewer">
+                        <div class="rev-avatar">MA</div>
+                        <div>
+                            <h4 data-i18n="rev_1_name">Mona A.</h4>
+                            <span data-i18n="rev_1_span">Teeth Whitening</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="rev_2_text">"I was terrified of dentists my whole life. The team here was so patient and gentle. Highly recommend!"</p>
+                    <div class="reviewer">
+                        <div class="rev-avatar">KH</div>
+                        <div>
+                            <h4 data-i18n="rev_2_name">Karim H.</h4>
+                            <span data-i18n="rev_2_span">Dental Implants</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text" data-i18n="rev_3_text">"Clean, modern, and professional. Booking online was super easy and they saw me the same day."</p>
+                    <div class="reviewer">
+                        <div class="rev-avatar">NS</div>
+                        <div>
+                            <h4 data-i18n="rev_3_name">Nour S.</h4>
+                            <span data-i18n="rev_3_span">General Checkup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="booking reveal" id="contact">
+        <div class="container">
+            <div class="booking-text">
+                <p class="hero-tag" data-i18n="book_tag">Book An Appointment</p>
+                <h2 data-i18n="book_title">Ready For A Healthier Smile?</h2>
+                <p data-i18n="book_desc">Fill in the form and we will confirm your appointment within one hour.</p>
+            </div>
+            <form class="booking-form" id="bookingForm">
+                <label for="name" data-i18n="form_name">Full Name</label>
+                <input type="text" id="name" name="name">
+                <label for="phone" data-i18n="form_phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+                <label for="service" data-i18n="form_service">Service</label>
+                <select id="service" name="service">
+                    <option value="" data-i18n="form_select">Select a service</option>
+                    <option data-i18n="serv_1_title">Teeth Whitening</option>
+                    <option data-i18n="serv_2_title">Braces & Aligners</option>
+                    <option data-i18n="serv_3_title">Dental Implants</option>
+                </select>
+                <label for="date" data-i18n="form_date">Preferred Date</label>
+                <input type="date" id="date" name="date">
+                <p class="form-message" id="formMessage"></p>
+                <button type="submit" class="btn-primary" data-i18n="btn_book">Book Appointment</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo">Astra<span>Dental</span></a>
+                <p data-i18n="footer_desc">Modern dental care with a gentle touch, in the heart of the city.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p data-i18n="footer_address">Smouha, Alexandria</p>
+                <p>+20 1210963651</p>
+                <p>hello@astradental.com</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_hours">Hours</h4>
+                <p data-i18n="footer_time">Sat – Thu: 10:00 AM – 9:00 PM</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_follow">Follow</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p data-i18n="footer_rights">© 2026 Astra Dental Care. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="auth-modal" id="authModal">
+        <div class="auth-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 id="modalTitle" data-i18n="login">Log In</h2>
+            <form id="authForm">
+                <div id="signupFields" style="display: none;">
+                    <label data-i18n="form_name">Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                    <label data-i18n="form_phone">Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone">
+                </div>
+                <label data-i18n="form_email">Email</label>
+                <input type="email" placeholder="Enter your email" required>
+                <label data-i18n="form_password">Password</label>
+                <input type="password" placeholder="Enter your password" required>
+                <div id="confirmField" style="display: none;">
+                    <label data-i18n="form_confirm">Confirm Password</label>
+                    <input type="password" placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="btn-primary" style="width:100%; margin-top:15px;" data-i18n="form_submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Floating WhatsApp Button -->
+<a href="https://wa.me/201210963651?text=Hi,%20I%20saw%20your%20website%20demo%20and%20I%20would%20like%20to%20discuss%20building%20a%20website%20for%20my%20business." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="35" height="35" fill="#fff">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zM223.9 414.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 334.8l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+</a>
+</body>
+</html>
