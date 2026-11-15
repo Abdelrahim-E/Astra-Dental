@@ -1,345 +1,140 @@
-/* --- Translations Dictionary --- */
-const translations = {
-    en: {
-                rev_tag: "Testimonials", rev_title: "What Our Patients Say", rev_desc: "Real reviews from real people.",
-        rev_1_text: '"The best dental experience I\'ve ever had. The clinic is beautiful, and Dr. Sarah made me feel completely at ease."',
-        rev_1_name: "Mona A.", rev_1_span: "Teeth Whitening",
-        rev_2_text: '"I was terrified of dentists my whole life. The team here was so patient and gentle. Highly recommend!"',
-        rev_2_name: "Karim H.", rev_2_span: "Dental Implants",
-        rev_3_text: '"Clean, modern, and professional. Booking online was super easy and they saw me the same day."',
-        rev_3_name: "Nour S.", rev_3_span: "General Checkup",
-                faq_tag: "Questions", faq_title: "Frequently Asked Questions",
-        faq_1_q: "Does the treatment hurt?", faq_1_a: "We use modern techniques and local anesthesia to ensure your visit is completely painless and comfortable.",
-        faq_2_q: "How much does a checkup cost?", faq_2_a: "The initial consultation and checkup are completely free for new patients.",
-        faq_3_q: "Do you accept insurance?", faq_3_a: "Yes, we accept most major insurance providers. Please contact us to verify your specific plan.",
-        ba_tag: "Smile Transformation", ba_title: "See The Difference", ba_desc: "Drag the slider to see the results of our smile makeovers.",
-        lang_label: "Language", account_label: "Account", login: "Log In", signup: "Sign Up",
-        theme_label: "Theme", dark_mode: "Dark Mode", nav_services: "Services", nav_why: "Why Us",
-        nav_team: "Team", nav_book: "Book Now", hero_tag: "Astra Dental Care",
-        hero_title: "Your Smile, <span>Our Priority</span>",
-        hero_desc: "Modern dental care with a gentle touch. From routine checkups to full smile makeovers — all in one place.",
-        btn_book: "Book Appointment", btn_services: "Our Services", serv_tag: "What We Do",
-        serv_title: "Our Services", serv_desc: "Complete dental care for the whole family.",
-        serv_1_title: "Teeth Whitening", serv_1_desc: "Brighten your smile in a single visit with safe, professional whitening.",
-        serv_2_title: "Braces & Aligners", serv_2_desc: "Straighten your teeth with modern invisible aligners or classic braces.",
-        serv_3_title: "Dental Implants", serv_3_desc: "Permanent, natural-looking replacements for missing teeth.",
-        why_tag: "Why Choose Us", why_title: "Care You Can Feel From The First Visit",
-        why_desc: "We combine modern technology with a calm, friendly environment so every visit feels easy.",
-        why_1_title: "Gentle & Painless", why_1_desc: "Modern techniques and local anesthesia for a comfortable visit.",
-        why_2_title: "Same-Day Appointments", why_2_desc: "Book online and get seen within 24 hours.",
-        why_3_title: "Clear Pricing", why_3_desc: "You know the full cost before treatment starts.",
-        team_tag: "Our Team", team_title: "Meet Your Dentists", team_desc: "Experienced specialists who care about your comfort.",
-        team_1_name: "Dr. Sarah Ahmed", team_1_role: "Cosmetic Dentistry",
-        team_2_name: "Dr. Omar Hassan", team_2_role: "Orthodontics",
-        team_3_name: "Dr. Layla Mostafa", team_3_role: "Pediatric Dentistry",
-        book_tag: "Book An Appointment", book_title: "Ready For A Healthier Smile?",
-        book_desc: "Fill in the form and we will confirm your appointment within one hour.",
-        form_name: "Full Name", form_phone: "Phone Number", form_service: "Service",
-        form_select: "Select a service", form_date: "Preferred Date", form_email: "Email",
-        form_password: "Password", form_confirm: "Confirm Password", form_submit: "Submit",
-        footer_desc: "Modern dental care with a gentle touch, in the heart of the city.",
-        footer_contact: "Contact", footer_address: "Smouha, Alexandria",
-        footer_hours: "Hours", footer_time: "Sat – Thu: 10:00 AM – 9:00 PM",
-        footer_follow: "Follow", footer_rights: "© 2026 Astra Dental Care. All rights reserved."
-    },
-    ar: {
-                rev_tag: "آراء المرضى", rev_title: "ماذا يقول مرضانا", rev_desc: "تقييمات حقيقية من أشخاص حقيقيين.",
-        rev_1_text: '"أفضل تجربة أسنان مررت بها. العيادة جميلة، والدكتورة سارة جعلتني أشعر بالراحة التامة."',
-        rev_1_name: "منى أ.", rev_1_span: "تبييض الأسنان",
-        rev_2_text: '"كنت أخاف من أطباء الأسنان طوال حياتي. الفريق هنا كان صبورًا ولطيفًا جدًا. أوصي به بشدة!"',
-        rev_2_name: "كريم ح.", rev_2_span: "زراعة الأسنان",
-        rev_3_text: '"نظيف، حديث، واحترافي. كان الحجز عبر الإنترنت سهلاً للغاية واستقبلوني في نفس اليوم."',
-        rev_3_name: "نور س.", rev_3_span: "فحص عام",
-                faq_tag: "الأسئلة الشائعة", faq_title: "الأسئلة الشائعة",
-        faq_1_q: "هل العلاج مؤلم؟", faq_1_a: "نستخدم تقنيات حديثة وتخدير موضعي لضمان أن تكون زيارتك خالية من الألم ومريحة تمامًا.",
-        faq_2_q: "كم تكلفة الفحص؟", faq_2_a: "الاستشارة والفحص الأولي مجانيان تمامًا للمرضى الجدد.",
-        faq_3_q: "هل تقبلون التأمين؟", faq_3_a: "نعم، نقبل معظم شركات التأمين الكبرى. يرجى الاتصال بنا للتحقق من خطتك.",
-        ba_tag: "تحول الابتسامة", ba_title: "شاهد الفرق", ba_desc: "اسحب شريط التمرير لرؤية نتائج تجميل الابتسامة.",
-        lang_label: "اللغة", account_label: "الحساب", login: "تسجيل الدخول", signup: "إنشاء حساب",
-        theme_label: "المظهر", dark_mode: "الوضع الداكن", nav_services: "الخدمات", nav_why: "لماذا نحن",
-        nav_team: "الفريق", nav_book: "احجز الآن", hero_tag: "أسترا لطب الأسنان",
-        hero_title: "ابتسامتك، <span>أولويتنا</span>",
-        hero_desc: "رعاية أسنان حديثة بلمسة لطيفة. من الفحوصات الروتينية إلى تجميل الابتسامة الكامل — كل ذلك في مكان واحد.",
-        btn_book: "احجز موعداً", btn_services: "خدماتنا", serv_tag: "ماذا نفعل",
-        serv_title: "خدماتنا", serv_desc: "رعاية أسنان شاملة لجميع أفراد الأسرة.",
-        serv_1_title: "تبييض الأسنان", serv_1_desc: "أبرز ابتسامتك في زيارة واحدة مع تبييض آمن واحترافي.",
-        serv_2_title: "التقويم", serv_2_desc: "قم بتعديل أسنانك باستخدام التقويم الشفاف الحديث أو التقويم المعدني الكلاسيكي.",
-        serv_3_title: "زراعة الأسنان", serv_3_desc: "بدائل دائمة وطبيعية المظهر للأسنان المفقودة.",
-        why_tag: "لماذا تختارنا", why_title: "رعاية تشعر بها من الزيارة الأولى",
-        why_desc: "نجمع بين التكنولوجيا الحديثة وبيئة هادئة وودودة حتى تكون كل زيارة سهلة.",
-        why_1_title: "لطيف وغير مؤلم", why_1_desc: "تقنيات حديثة وتخدير موضعي لزيارة مريحة.",
-        why_2_title: "مواعيد في نفس اليوم", why_2_desc: "احجز عبر الإنترنت واحصل على موعد في غضون 24 ساعة.",
-        why_3_title: "أسعار واضحة", why_3_desc: "تعرف على التكلفة الكاملة قبل بدء العلاج.",
-        team_tag: "فريقنا", team_title: "تعرف على أطباء الأسنان", team_desc: "أخصائيون ذوو خبرة يهتمون براحتك.",
-        team_1_name: "د. سارة أحمد", team_1_role: "طب الأسنان التجميلي",
-        team_2_name: "د. عمر حسن", team_2_role: "تقويم الأسنان",
-        team_3_name: "د. ليلى مصطفى", team_3_role: "طب أسنان الأطفال",
-        book_tag: "احجز موعداً", book_title: "مستعد لابتسامة أكثر صحة؟",
-        book_desc: "املأ النموذج وسنؤكد موعدك في غضون ساعة واحدة.",
-        form_name: "الاسم الكامل", form_phone: "رقم الهاتف", form_service: "الخدمة",
-        form_select: "اختر الخدمة", form_date: "التاريخ المفضل", form_email: "البريد الإلكتروني",
-        form_password: "كلمة المرور", form_confirm: "تأكيد كلمة المرور", form_submit: "إرسال",
-        footer_desc: "رعاية أسنان حديثة بلمسة لطيفة، في قلب المدينة.",
-        footer_contact: "اتصل بنا", footer_address: "سموحة، الإسكندرية",
-        footer_hours: "ساعات العمل", footer_time: "السبت – الخميس: 10:00 صباحاً – 9:00 مساءً",
-        footer_follow: "تابعنا", footer_rights: "© 2026 أسترا لطب الأسنان. جميع الحقوق محفوظة."
-    }
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+// localStorage can throw (private mode), so every call goes through here
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 };
 
-/* --- Language Switcher --- */
-const langSelect = document.getElementById("langSelect");
+// English lives in the HTML. Only Arabic and the form messages are kept here.
+const ar = {
+  n1: "العلاج", n2: "النتائج", n3: "الأطباء", n4: "أسئلة", book: "احجز زيارة",
+  h1: "ابتسامة من القلب.",
+  hp: "فحوصات وتبييض وتقويم وزراعة أسنان لكل العائلة، كل ذلك تحت سقف واحد.",
+  hb2: "شاهد الأسعار", badge: "مواعيد في نفس اليوم، من السبت إلى الخميس",
+  s_t: "العلاجات وأسعار البداية", s_p: "تحصل على السعر الدقيق بعد الفحص، مكتوبًا، وقبل بدء أي علاج.",
+  s1t: "تبييض الأسنان", s1d: "زيارة واحدة تستغرق نحو ساعة. لطيف على المينا.", s1p: "من 1,500 جنيه",
+  s2t: "التقويم والمصففات الشفافة", s2d: "مصففات شفافة أو تقويم معدني، نخطط له معك.", s2p: "من 15,000 جنيه",
+  s3t: "زراعة الأسنان", s3d: "بديل طبيعي المظهر للسن المفقود.", s3p: "من 12,000 جنيه للسن",
+  r_t: "هكذا تبدو ابتسامة بعد التجميل", r_p: "اسحب المقبض أو استخدم أسهم لوحة المفاتيح.", bef: "قبل", aft: "بعد",
+  t_t: "أطباؤك",
+  d1: "د. سارة أحمد", d1r: "تجميل الأسنان", d2: "د. عمر حسن", d2r: "تقويم الأسنان", d3: "د. ليلى مصطفى", d3r: "أسنان الأطفال",
+  v_t: "ماذا يقول المرضى",
+  v1: "\"تجنبت أطباء الأسنان لسنوات. شرحت لي د. سارة كل خطوة ولم أشعر بشيء.\"", v1n: "منى أ.، تبييض",
+  v2: "\"السعر المكتوب في خطتي هو ما دفعته. لا بنود إضافية في الفاتورة.\"", v2n: "كريم ح.، زراعة",
+  v3: "\"حجزت صباحًا وجلست على الكرسي بعد الظهر.\"", v3n: "نور س.، فحص",
+  f_t: "قبل أن تحجز",
+  q1: "هل سيؤلمني العلاج؟", a1: "نستخدم تخديرًا موضعيًا ونسير بالسرعة التي تناسبك. قل لنا توقف فنتوقف.",
+  q2: "كم تكلفة الفحص الأول؟", a2: "لا شيء. الفحص الأول والاستشارة مجانيان للمرضى الجدد.",
+  q3: "هل تقبلون التأمين؟", a3: "نعم، معظم الشركات الكبرى. اتصل بنا بخطتك وسنتحقق منها قبل زيارتك.",
+  c_t: "اختر يومًا ووقتًا", c_p: "نؤكد الموعد بالهاتف خلال ساعة.",
+  l1: "الاسم الكامل", l2: "الهاتف", l3: "العلاج", l4: "اليوم", l5: "الوقت",
+  s0: "فحص (مجاني)", send: "اطلب الموعد",
+  fd: "رعاية أسنان للعائلة في الإسكندرية.", fa: "زيارتنا", fad: "الإسكندرية، مصر",
+  fh: "من السبت إلى الخميس، 10 صباحًا حتى 9 مساءً", fc: "التواصل",
+  rights: "© 2026 أسترا لطب الأسنان. مشروع تجريبي وليست عيادة حقيقية.",
+  cr: "تريد موقعًا مثل هذا؟ راسل المطور",
+  mapbtn: "اعرض الخريطة", g_t: "داخل العيادة", fv_t: "زيارتك الأولى",
+  fv1b: "نتحدث قبل أي شيء.", fv1: "أخبرنا بما يزعجك وبما يقلقك. عشر دقائق، ولا كرسي بعد.",
+  fv2b: "ثم فحص لطيف.", fv2: "أشعة فقط إذا احتجنا إليها. لا يبدأ شيء دون موافقتك.",
+  fv3b: "تغادر ومعك خطة.", fv3: "مكتوبة مع الأسعار. قرر في البيت، لا استعجال.",
+  vi_t: "زرنا", hr1: "من السبت إلى الخميس", hr2: "الجمعة", closed: "مغلق",
+  callb: "اتصل بالعيادة", call: "اتصل", wa: "واتساب",
+  o_open: "مفتوح الآن حتى 9 مساءً", o_today: "مغلق الآن. نفتح اليوم 10 صباحًا",
+  o_tom: "مغلق الآن. نفتح غدًا 10 صباحًا", o_sat: "مغلق الآن. نفتح السبت 10 صباحًا",
+  m_name: "اكتب اسمك الكامل.", m_phone: "اكتب رقم هاتف صحيحًا.", m_date: "اختر اليوم من اليوم فصاعدًا.",
+  m_slot: "اختر وقتًا.", m_ok: "نموذج تجريبي: لم يُرسل شيء. في الموقع الحقيقي يصل الطلب إلى العيادة."
+};
+const en = {
+  o_open: "Open now, until 9 pm", o_today: "Closed now. Opens today at 10 am",
+  o_tom: "Closed now. Opens tomorrow at 10 am", o_sat: "Closed now. Opens Saturday at 10 am",
+  m_name: "Enter your full name.", m_phone: "Enter a valid phone number.", m_date: "Pick today or a later day.",
+  m_slot: "Pick a time.", m_ok: "Demo form: nothing was sent. On the live site this reaches the clinic."
+};
 
-function updateLanguage(lang) {
-    // Set Direction
-    if (lang === "ar") {
-        document.documentElement.setAttribute("dir", "rtl");
-        document.documentElement.setAttribute("lang", "ar");
-    } else {
-        document.documentElement.setAttribute("dir", "ltr");
-        document.documentElement.setAttribute("lang", lang);
-    }
+let lang = store.get("lang") === "ar" ? "ar" : "en";
+const t = k => (lang === "ar" ? ar : en)[k];
 
-    // Translate all elements with data-i18n
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.getAttribute("data-i18n");
-        if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
-        }
-    });
+// remember the English text from the HTML so we can switch back
+$$("[data-i18n]").forEach(el => { el.dataset.en = el.innerHTML; });
+
+function setLang(l) {
+  lang = l;
+  document.documentElement.lang = l;
+  document.documentElement.dir = l === "ar" ? "rtl" : "ltr";
+  $$("[data-i18n]").forEach(el => { el.innerHTML = l === "ar" ? ar[el.dataset.i18n] : el.dataset.en; });
+  $("#langBtn").textContent = l === "ar" ? "EN" : "ع";
+  updateOpen();
+  store.set("lang", l);
+}
+$("#langBtn").addEventListener("click", () => setLang(lang === "ar" ? "en" : "ar"));
+setLang(lang);
+
+// theme: saved choice first, then the visitor's system setting
+const saved = store.get("theme");
+document.body.classList.toggle("dark", saved ? saved === "dark" : matchMedia("(prefers-color-scheme: dark)").matches);
+$("#themeBtn").addEventListener("click", () => {
+  const dark = document.body.classList.toggle("dark");
+  store.set("theme", dark ? "dark" : "light");
+});
+
+$("#burger").addEventListener("click", () => $("#nav").classList.toggle("open"));
+$$("#nav a").forEach(a => a.addEventListener("click", () => $("#nav").classList.remove("open")));
+
+// before/after: the range input sits invisibly on top, so touch, mouse and keyboard all work
+const range = $("#baRange");
+function moveSlider() {
+  const v = range.value;
+  $("#beforeImg").style.clipPath = `inset(0 ${100 - v}% 0 0)`;
+  $("#baLine").style.left = v + "%";
+}
+range.addEventListener("input", moveSlider);
+
+const today = new Date().toISOString().slice(0, 10);
+$("#dt").min = today;
+
+$("#form").addEventListener("submit", e => {
+  e.preventDefault();
+  const msg = $("#msg");
+  const name = $("#nm").value.trim();
+  const phone = $("#ph").value.replace(/[\s()-]/g, "");
+  const day = $("#dt").value;
+  let err = "";
+  if (name.length < 3) err = "m_name";
+  else if (!/^\+?\d{10,14}$/.test(phone)) err = "m_phone";
+  else if (!day || day < today) err = "m_date";
+  else if (!$("input[name=slot]:checked")) err = "m_slot";
+  msg.classList.toggle("bad", !!err);
+  msg.textContent = t(err || "m_ok");
+  if (!err) e.target.reset();
+});
+
+// "open now" uses Cairo time, not the visitor's clock. Clinic is closed on Fridays.
+function updateOpen() {
+  const parts = new Intl.DateTimeFormat("en-US", { timeZone: "Africa/Cairo", weekday: "short", hour: "numeric", hour12: false }).formatToParts(new Date());
+  const get = type => parts.find(p => p.type === type).value;
+  const day = get("weekday"), hour = +get("hour") % 24;
+  const openDay = day !== "Fri";
+  let key;
+  if (openDay && hour >= 10 && hour < 21) key = "o_open";
+  else if (openDay && hour < 10) key = "o_today";
+  else key = day === "Thu" ? "o_sat" : "o_tom";
+  $("#openTxt").textContent = t(key);
+  $("#openNow").classList.toggle("on", key === "o_open");
 }
 
-langSelect.addEventListener("change", (e) => {
-    updateLanguage(e.target.value);
+// if a gallery photo fails to load, drop it instead of showing a broken icon
+$$(".gal img").forEach(img => {
+  const drop = () => img.remove();
+  img.addEventListener("error", drop);
+  if (img.complete && img.naturalWidth === 0) drop();
 });
 
-// Load saved language on start
-const savedLang = localStorage.getItem("lang") || "en";
-langSelect.value = savedLang;
-updateLanguage(savedLang);
-
-// Save language on change
-langSelect.addEventListener("change", (e) => {
-    localStorage.setItem("lang", e.target.value);
-});
-
-
-/* --- Mobile Menu --- */
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav");
-
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("nav-open");
-});
-
-document.querySelectorAll(".nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("nav-open");
-    });
-});
-
-/* --- Sidebar --- */
-const sidebar = document.getElementById("sidebar");
-const openSidebarBtn = document.getElementById("openSidebar");
-const closeSidebarBtn = document.getElementById("closeSidebar");
-const overlay = document.getElementById("overlay");
-
-function toggleSidebar() {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-}
-
-openSidebarBtn.addEventListener("click", toggleSidebar);
-closeSidebarBtn.addEventListener("click", toggleSidebar);
-overlay.addEventListener("click", toggleSidebar);
-
-/* --- Dark Mode (Saves on refresh) --- */
-const darkModeToggle = document.getElementById("darkModeToggle");
-const currentTheme = localStorage.getItem("theme");
-
-if (currentTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    darkModeToggle.checked = true;
-}
-
-darkModeToggle.addEventListener("change", () => {
-    if (darkModeToggle.checked) {
-        document.body.classList.add("dark-mode");
-        localStorage.setItem("theme", "dark");
-    } else {
-        document.body.classList.remove("dark-mode");
-        localStorage.setItem("theme", "light");
-    }
-});
-
-/* --- Scroll Animations --- */
-const revealElements = document.querySelectorAll(".reveal");
-const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.15 });
-
-revealElements.forEach(el => revealObserver.observe(el));
-
-/* --- Booking Form Validation & Saving --- */
-const form = document.getElementById("bookingForm");
-const formMessage = document.getElementById("formMessage");
-
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    formMessage.classList.remove("error", "success");
-
-    const name = document.getElementById("name").value.trim();
-    const phone = document.getElementById("phone").value.trim();
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-    const today = new Date().toISOString().split("T")[0];
-
-    // Validation
-    if (name.length < 3) {
-        formMessage.textContent = "Please enter your full name.";
-        formMessage.classList.add("error");
-        return;
-    }
-    if (phone.length < 10) {
-        formMessage.textContent = "Please enter a valid phone number.";
-        formMessage.classList.add("error");
-        return;
-    }
-    if (date && date < today) {
-        formMessage.textContent = "Please choose today or a future date.";
-        formMessage.classList.add("error");
-        return;
-    }
-
-    // --- SAVE TO LOCAL STORAGE ---
-    const newAppointment = { name, phone, service, date };
-    
-    // Get existing appointments or create a new empty array
-    let appointments = JSON.parse(localStorage.getItem("appointments")) || [];
-    
-    // Add the new one
-    appointments.push(newAppointment);
-    
-    // Save back to browser storage
-    localStorage.setItem("appointments", JSON.stringify(appointments));
-    // ------------------------------
-
-    // Show success
-    formMessage.textContent = "Thank you! We will confirm your appointment within one hour.";
-    formMessage.classList.remove("error");
-    formMessage.classList.add("success");
-
-    setTimeout(() => {
-        formMessage.textContent = "";
-        formMessage.classList.remove("success");
-    }, 4000);
-    
-    form.reset();
-});
-
-document.getElementById("date").min = new Date().toISOString().split("T")[0];
-/* --- Auth Modal (Login/Signup) --- */
-const authModal = document.getElementById("authModal");
-const closeModal = document.getElementById("closeModal");
-const modalTitle = document.getElementById("modalTitle");
-const signupFields = document.getElementById("signupFields");
-const confirmField = document.getElementById("confirmField");
-let isLoginMode = true;
-
-document.getElementById("loginBtn").addEventListener("click", () => {
-    isLoginMode = true;
-    modalTitle.textContent = translations[savedLang].login;
-    signupFields.style.display = "none";
-    confirmField.style.display = "none";
-    authModal.classList.add("active");
-});
-
-document.getElementById("signupBtn").addEventListener("click", () => {
-    isLoginMode = false;
-    modalTitle.textContent = translations[savedLang].signup;
-    signupFields.style.display = "block";
-    confirmField.style.display = "block";
-    authModal.classList.add("active");
-});
-
-closeModal.addEventListener("click", () => { authModal.classList.remove("active"); });
-authModal.addEventListener("click", (e) => { if (e.target === authModal) authModal.classList.remove("active"); });
-
-document.getElementById("authForm").addEventListener("submit", (e) => {
-    e.preventDefault(); 
-    
-    const email = e.target.querySelector('input[type="email"]').value;
-    const password = e.target.querySelector('input[type="password"]').value;
-    const submitBtn = e.target.querySelector('button[type="submit"]');
-
-    let savedUser = localStorage.getItem(email);
-
-    if (isLoginMode) {
-        if (!savedUser) {
-            submitBtn.textContent = "Account not found!";
-            submitBtn.style.backgroundColor = "#C0392B";
-        } else if (savedUser !== password) {
-            submitBtn.textContent = "Wrong password!";
-            submitBtn.style.backgroundColor = "#C0392B";
-        } else {
-            submitBtn.textContent = "Logged In!";
-            submitBtn.style.backgroundColor = "#C6A15B";
-        }
-    } else {
-        if (savedUser) {
-            submitBtn.textContent = "Email already exists!";
-            submitBtn.style.backgroundColor = "#C0392B";
-        } else {
-            localStorage.setItem(email, password);
-            submitBtn.textContent = "Account Created!";
-            submitBtn.style.backgroundColor = "#C6A15B";
-        }
-    }
-
-    setTimeout(() => {
-        if(submitBtn.textContent === "Logged In!" || submitBtn.textContent === "Account Created!") {
-            authModal.classList.remove("active");
-            e.target.reset();
-        }
-        submitBtn.textContent = translations[savedLang].form_submit;
-        submitBtn.style.backgroundColor = ""; 
-    }, 2000);
-});
-/* /* --- Before & After Slider Logic --- */
-const baSlider = document.getElementById("baSlider");
-const beforeImg = document.getElementById("beforeImg");
-const baHandle = document.getElementById("baHandle");
-
-if (baSlider) {
-    baSlider.addEventListener("input", (e) => {
-        const sliderValue = e.target.value;
-        
-        // Hide the left side of the before image based on slider position
-        beforeImg.style.clipPath = `polygon(0 0, ${sliderValue}% 0, ${sliderValue}% 100%, 0 100%)`;
-        
-        // Move the handle line
-        baHandle.style.left = `${sliderValue}%`;
-    });
-}
-/* --- FAQ Accordion --- */
-const faqQuestions = document.querySelectorAll(".faq-question");
-
-faqQuestions.forEach(question => {
-    question.addEventListener("click", () => {
-        const item = question.parentElement;
-        
-        // Close other open items (optional, remove if you want multiple open)
-        document.querySelectorAll(".faq-item").forEach(otherItem => {
-            if (otherItem !== item) {
-                otherItem.classList.remove("active");
-            }
-        });
-
-        // Toggle current item
-        item.classList.toggle("active");
-    });
+// the map loads only on click, so Google's scripts and cookies stay off the first page load
+$("#mapBtn").addEventListener("click", () => {
+  const f = document.createElement("iframe");
+  f.title = "Map of Alexandria";
+  f.src = "https://www.google.com/maps?q=Alexandria,Egypt&output=embed";
+  $("#mapBox").replaceChildren(f);
 });
