@@ -44,12 +44,14 @@ const ar = {
   o_open: "مفتوح الآن حتى 9 مساءً", o_today: "مغلق الآن. نفتح اليوم 10 صباحًا",
   o_tom: "مغلق الآن. نفتح غدًا 10 صباحًا", o_sat: "مغلق الآن. نفتح السبت 10 صباحًا",
   m_name: "اكتب اسمك الكامل.", m_phone: "اكتب رقم هاتف صحيحًا.", m_date: "اختر اليوم من اليوم فصاعدًا.",
+  consent: "أوافق على التواصل معي بخصوص هذا الطلب. <a href=\"privacy.html\">الخصوصية وملفات الارتباط</a>", privlink: "الخصوصية وملفات الارتباط", m_consent: "ضع علامة في المربع للموافقة.",
   m_slot: "اختر وقتًا.", m_ok: "نموذج تجريبي: لم يُرسل شيء. في الموقع الحقيقي يصل الطلب إلى العيادة."
 };
 const en = {
   o_open: "Open now, until 9 pm", o_today: "Closed now. Opens today at 10 am",
   o_tom: "Closed now. Opens tomorrow at 10 am", o_sat: "Closed now. Opens Saturday at 10 am",
   m_name: "Enter your full name.", m_phone: "Enter a valid phone number.", m_date: "Pick today or a later day.",
+  m_consent: "Please tick the box to agree.",
   m_slot: "Pick a time.", m_ok: "Demo form: nothing was sent. On the live site this reaches the clinic."
 };
 
@@ -105,6 +107,7 @@ $("#form").addEventListener("submit", e => {
   else if (!/^\+?\d{10,14}$/.test(phone)) err = "m_phone";
   else if (!day || day < today) err = "m_date";
   else if (!$("input[name=slot]:checked")) err = "m_slot";
+  else if (!$("#ok").checked) err = "m_consent";
   msg.classList.toggle("bad", !!err);
   msg.textContent = t(err || "m_ok");
   if (!err) e.target.reset();
